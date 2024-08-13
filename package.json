@@ -8,8 +8,6 @@
     "products": "npm run build && node ./dist/helpers/generateProducts.js",
     "dev": "nodemon --config nodemon.json ./src/server.ts"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
