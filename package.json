@@ -1,7 +1,6 @@
 {
   "name": "foo",
   "version": "1.0.0",
-  "description": "",
   "main": "server.ts",
   "scripts": {
     "build": "tsc",
