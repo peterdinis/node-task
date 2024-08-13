@@ -2,6 +2,9 @@ import { Request, Response } from 'express';
 import { Product } from '../interfaces/productInterface';
 import { fetchProducts } from '../services/productsService';
 
+
+// controller for getting all products
+
 export const getProducts = async (req: Request, res: Response) => {
     const minPrice = parseFloat(req.query.minPrice as string) || 0;
     const maxPrice = parseFloat(req.query.maxPrice as string) || 100000;

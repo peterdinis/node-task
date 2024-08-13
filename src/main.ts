@@ -1,10 +1,11 @@
-import express from 'express';
+import express, { Application } from 'express';
 import productRoutes from "./routes/productRouter";
 import * as dotenv from "dotenv";
 
 dotenv.config();
 
-const app = express();
+const app: Application = express();
+
 const PORT = process.env.PORT as unknown as number || 4000;
 
 app.use(productRoutes);

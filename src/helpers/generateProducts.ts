@@ -1,16 +1,9 @@
 import { faker } from '@faker-js/faker';
 import * as fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
+import { Product } from '../interfaces/productInterface';
 
-interface Product {
-    id: string;
-    name: string;
-    description: string;
-    price: number;
-    category: string;
-    stock: number;
-    rating: number;
-}
+/* This function generate fake products using faker package */
 
 function generateProducts(): Product[] {
     const products: Product[] = [];

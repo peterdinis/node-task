@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 import { Product } from '../interfaces/productInterface';
 
+/* Service for fetching products */
+
 const products: Product[] = JSON.parse(fs.readFileSync('products.json', 'utf-8'));
 
 if(!products) {
