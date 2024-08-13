@@ -9,7 +9,7 @@ export const getProducts = async (req: Request, res: Response) => {
     let totalProducts = 0;
     let allProducts: Product[] = [];
 
-    const scrapeProducts = async (minPrice: number, maxPrice: number) => {
+    const applicationProducts = async (minPrice: number, maxPrice: number) => {
         const data = fetchProducts(minPrice, maxPrice);
         totalProducts = data.total;
 
@@ -17,12 +17,12 @@ export const getProducts = async (req: Request, res: Response) => {
 
         if (data.count === 1000) {
             const midPrice = (minPrice + maxPrice) / 2;
-            await scrapeProducts(minPrice, midPrice);
-            await scrapeProducts(midPrice + 1, maxPrice);
+            await applicationProducts(minPrice, midPrice);
+            await applicationProducts(midPrice + 1, maxPrice);
         }
     };
 
-    await scrapeProducts(minPrice, maxPrice);
+    await applicationProducts(minPrice, maxPrice);
 
     res.json({
         total: totalProducts,
