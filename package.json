@@ -2,12 +2,12 @@
   "name": "foo",
   "version": "1.0.0",
   "description": "",
-  "main": "main.ts",
+  "main": "server.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "products": "npm run build && node ./dist/helpers/generateProducts.js",
-    "dev": "nodemon --config nodemon.json ./src/main.ts"
+    "dev": "nodemon --config nodemon.json ./src/server.ts"
   },
   "keywords": [],
   "author": "",
